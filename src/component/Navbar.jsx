@@ -15,7 +15,7 @@ const Navbar = () => {
             ))}
     
        </div>
-       <div className="flex items-baseline gap-6 px-4 ">
+       <div className="flex items-baseline gap-6 px-10 ">
        <Searchbar/>
        <Shopping/>
 
