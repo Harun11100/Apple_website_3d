@@ -16,7 +16,7 @@ const Hero = () => {
     })
     gsap.to('#cta',{
       opacity:1,
-      y:-50,
+      y:-60,
       duration:2,
       delay:2
     })
@@ -36,19 +36,19 @@ const Hero = () => {
    },[])
 
   return ( 
-   <section className="w-full nav-height bg-black relative">
+   <section className="w-full nav-height bg-black relative ">
       <div className="flex-center h-5/7 w-full flex-col">
           <p id='hero' className="hero-title">iPhone 20 pro</p>
       </div>
-      <div className="w-11/12 ">
-        <video className="items-center" autoPlay muted playsInline={true} key={videoSrc} >
+      <div className="w-8/5 ">
+        <video className="pointer-events-none" autoPlay muted playsInline={true} key={videoSrc} >
           <source src={videoSrc} type="video/mp4" />
         </video>
       </div>
       <div id="cta" 
-      className="flex flex-col items-center opacity-0 translate-y-20">
+      className="flex flex-col items-center opacity-0">
        <a href="#highlights" className="btn">Buy</a>
-       <p className="font-normal text-xl"> From $199/month or $999</p>
+       <p className="font-normal text-gray-100 text-xl"> From $199/month or $999</p>
       </div>
    </section>
   )

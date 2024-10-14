@@ -46,6 +46,7 @@ export const hightlightsSlides = [
   },
 ];
 
+export default hightlightsSlides
 export const models = [
   {
     id: 1,
