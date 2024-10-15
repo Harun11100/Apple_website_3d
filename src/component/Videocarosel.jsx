@@ -7,9 +7,9 @@ import { pauseImg, playImg, replayImg } from "../utils";
 import { useGSAP } from "@gsap/react";
 
 const Videocarosel = () => {
-    const videoRef=useRef();
-    const videoSpanRef=useRef();
-    const videoDivRef=useRef();
+    const videoRef=useRef([]);
+    const videoSpanRef=useRef([]);
+    const videoDivRef=useRef([]);
     const [loadedData,setLoadedData]=useState([])
 
 
