@@ -1,12 +1,13 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import ModelView from "./ModelView"
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import {yellowImg } from '../utils'
 import * as THREE from 'three'
 import { Canvas } from "@react-three/fiber"
 import { View } from "@react-three/drei"
 import {models, sizes} from '../constants'
+import { animateWithGsapTimeLine } from "../utils/animations"
 
 const Model = () => {
 
@@ -20,7 +21,8 @@ const Model = () => {
 // camera control for the view
       const cameraControlSmall=useRef();
       const cameraControlLarge=useRef();
-
+      const tl =gsap.timeline();
+      
       // model size
 
       const small=useRef(new THREE.Group());
@@ -31,18 +33,37 @@ const Model = () => {
 
       const [largeRotation, setLargeRotation]=useState(0);
 
+
+      useEffect(()=>{
+            if(size==='small'){
+               animateWithGsapTimeLine(tl,large,smallRotation,'#view2','#view1',{
+                     transform:'translateX(0)',
+                     duration:2
+               })
+            }
+            if(size==='large'){
+               animateWithGsapTimeLine(tl,small,largeRotation,'#view1','#view2',{
+                     transform:'translateX(-100%)',
+                     duration:2
+               })
+            }
+   
+   
+         },[size])
+
+
       useGSAP(()=>{
 
             gsap.to('#heading',{
-                  y:10,
+                  y:0,
                   duration:2,
                   opacity:1
             })
       },[])
   return (
    <section className="common-padding">
-      <div className="screen-max-width text-white">
-            <h1 id="heading" className="section-heading text-white">
+      <div className="screen-max-width">
+            <h1 id="heading" className="section-heading">
                   Take a closer look
             </h1>
 
@@ -54,7 +75,7 @@ const Model = () => {
                    groupRef={small}
                    gsapType='view1'
                    controlRef={cameraControlSmall}
-                   setRotationState={smallRotation}
+                   setRotationSize={setSmallRotation}
                    item={model}
                    size={size}
                    />
@@ -63,7 +84,7 @@ const Model = () => {
                    groupRef={large}
                    gsapType='view2'
                    controlRef={cameraControlLarge}
-                   setRotationState={largeRotation}
+                   setRotationSize={setLargeRotation}
                    item={model}
                    size={size}
                    />
@@ -79,13 +100,13 @@ const Model = () => {
                   </Canvas>
                   </div>
                   <div className="mx-auto w-full">
-                         <p className="text-sm sm:tex-xl font-light text-center mb-5">
+                         <p className="text-sm font-light text-center mb-5">
                               {model.title}
                          </p>
                          <div className="flex-center">
                              <ul className="color-container">
-                              {models.map((item)=>(
-                              <li key={item.id} className="w-6 h-6 rounded-full mx-2 " style={{
+                              {models.map((item,i)=>(
+                              <li key={i} className="w-6 h-6 rounded-full mx-2 cursor-pointer " style={{
                                     backgroundColor:item.color[0],
                               }}
                               onClick={()=>setModel(item)}
