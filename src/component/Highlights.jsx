@@ -15,7 +15,8 @@ const Highlights = () => {
   useGSAP(()=>{
     gsap.to('#title',{
       opacity:1,
-      y:0  
+      duration:2,
+      y:10
     })
 
     gsap.to('.link',{
