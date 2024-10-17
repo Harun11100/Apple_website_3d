@@ -12,6 +12,7 @@ import {
 export const navLists = ["Store", "Mac", "iPhone", "Support"];
 
 export const hightlightsSlides = [
+  
   {
     id: 1,
     textLists: [
@@ -47,6 +48,7 @@ export const hightlightsSlides = [
 ];
 
 export default hightlightsSlides
+
 export const models = [
   {
     id: 1,

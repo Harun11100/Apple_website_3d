@@ -7,7 +7,7 @@ import * as THREE from 'three'
 import { Canvas } from "@react-three/fiber"
 import { View } from "@react-three/drei"
 import {models, sizes} from '../constants'
-import { animateWithGsapTimeLine } from "../utils/animations"
+import { animateWithGsap, animateWithGsapTimeLine } from "../utils/animations"
 
 const Model = () => {
 
@@ -38,28 +38,36 @@ const Model = () => {
             if(size==='small'){
                animateWithGsapTimeLine(tl,large,smallRotation,'#view2','#view1',{
                      transform:'translateX(0)',
-                     duration:2
+                     duration:1,
+                     repeat:-1
                })
             }
             if(size==='large'){
                animateWithGsapTimeLine(tl,small,largeRotation,'#view1','#view2',{
                      transform:'translateX(-100%)',
-                     duration:2
+                     duration:1
+
                })
             }
-   
-   
          },[size])
 
 
-      useGSAP(()=>{
+      // useGSAP(()=>{
 
-            gsap.to('#heading',{
-                  y:0,
-                  duration:2,
-                  opacity:1
+      //       gsap.to('#heading',{
+      //             y:0,
+      //             duration:2,
+      //             opacity:1
+      //       })
+      // },[])
+
+      useGSAP(()=>{
+            animateWithGsap('#heading',{
+                y:0,
+                opacity:1,
             })
-      },[])
+        },[])
+
   return (
    <section className="common-padding">
       <div className="screen-max-width">

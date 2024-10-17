@@ -3,6 +3,7 @@ import gsap from "gsap"
 import { rightImg, watchImg } from "../utils"
 import Videocarosel from "./Videocarosel"
 import ScrollTrigger from 'gsap/all'
+import { animateWithGsap } from "../utils/animations"
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -11,25 +12,36 @@ gsap.registerPlugin(ScrollTrigger)
 const Highlights = () => {
 
 
-
   useGSAP(()=>{
-    gsap.to('#title',{
-      opacity:1,
-      duration:2,
-      y:10
+    animateWithGsap('#title',{
+        y:0,
+        opacity:1,
+     
     })
+  
+},[])
 
-    gsap.to('.link',{
-      opacity:1,
-      y:0,
-      duration:3,
-      stagger:1,
-      
-      
+useGSAP(()=>{
+  animateWithGsap('#link',{
+    y:0,
+    opacity:1,
+    stagger:1,
+    duration:3,
+   
+})
 
-    })
+},[])
 
-  },[])
+
+  // useGSAP(()=>{
+  
+  //   gsap.to('.link',{
+  //     opacity:1,
+  //     y:0,
+  //     duration:3,
+  //     stagger:1,
+  //   })
+  // },[])
   
   return (
     <section id="highlights" className="w-screen bg-zinc common-padding h-full ">

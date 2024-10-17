@@ -63,7 +63,7 @@ canvas {
   }
 
   .feature-text {
-    @apply text-gray max-w-md text-lg md:text-xl font-semibold opacity-0 translate-y-[100px]
+    @apply text-gray-100 max-w-md text-lg md:text-xl font-semibold opacity-0 translate-y-[100px]
   }
 
   .feature-text-container {

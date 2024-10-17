@@ -1,5 +1,5 @@
 import Navbar from "./component/Navbar"
-
+import Features from "./component/Features"
 import  Hero from "./component/Hero"
 import  Highlights from "./component/Highlights"
 import Model from "./component/Model"
@@ -10,6 +10,7 @@ function App() {
     <Hero/>
     <Highlights/>
     <Model/>
+    <Features/>
    </main>
   )
 }
