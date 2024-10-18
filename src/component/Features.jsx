@@ -61,7 +61,7 @@ const Features = () => {
 
                          </div>
                          <div className='overflow-hidden flex-1 h-[50vh]'>
-                              <img  src={explore2Img} alt="titanium 2" className='feature-video g_grow' />
+                              <img  src={explore2Img} alt="titanium 2" className='feature-video g_grow lg:w-screen' />
 
                          </div>
 

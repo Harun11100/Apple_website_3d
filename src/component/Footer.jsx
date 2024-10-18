@@ -1,4 +1,6 @@
 import React from 'react'
+import { footerLinks } from '../constants'
+import { div } from 'three/webgpu'
 
 const Footer = () => {
   return (
@@ -20,10 +22,21 @@ const Footer = () => {
 
        < div className='bg-neutral-700 my-5 h-[1px] w-full' />
     </div>
-    <div className='flex flex-col'>
-      <p className='font-semibold text-gray-50 text-sm'>
+    <div className='flex flex-col px-10'>
+      <p className='font-semibold  text-gray-50 text-sm'>
             Copyright &copy; Apple Inc. All rights reverved.
       </p>
+    </div>
+    <div className='flex justify-center items-center'>
+      {footerLinks.map(link=>(
+            <div key={link} className=' text-xs cursor-pointer px-3 text-blue'>
+                  <ul className='hover:underline'>
+                  {link}
+                  </ul>
+                
+            </div>
+      ))}
+
     </div>
    </footer>
   )

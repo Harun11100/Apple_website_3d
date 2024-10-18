@@ -10,12 +10,24 @@ const HowItWorks = () => {
 
     useGSAP(()=>{
       
-      animateWithGsap('.g_fadeIn',{
-            y:0,
-            opacity:1,
-            ease:'power2.inOut',
-            duration:2
-      }),
+      // animateWithGsap('.g_fadeIn',{
+      //       y:0,
+      //       opacity:1,
+      //       ease:'power2.inOut',
+      //       duration:2
+      // }),
+
+      gsap.to('.g_fadeIn',{
+             scrollTrigger:{
+                  trigger:'.g_fadeIn',
+                  start:"-20% bottom"
+             },
+             opacity:1,
+             ease:'power2.inOut',
+             duration:5,
+             y:0
+      })
+
 
 
       gsap.to('#hiw-video',{
