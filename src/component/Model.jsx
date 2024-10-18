@@ -39,7 +39,7 @@ const Model = () => {
                animateWithGsapTimeLine(tl,large,smallRotation,'#view2','#view1',{
                      transform:'translateX(0)',
                      duration:1,
-                     repeat:-1
+                    
                })
             }
             if(size==='large'){

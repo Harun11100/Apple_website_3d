@@ -48,7 +48,7 @@ const Hero = () => {
       <div id="cta" 
       className="flex flex-col items-center opacity-0">
        <a href="#highlights" className="btn">Buy</a>
-       <p className="font-normal text-gray-100 text-xl"> From $199/month or $999</p>
+       <p className="font-normal text-gray-100 text-xl"> From $0.1/month or $99</p>
       </div>
    </section>
   )

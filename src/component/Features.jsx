@@ -29,8 +29,6 @@ const Features = () => {
      
      
      })
-
-
            animateWithGsap('#features_title',{ y:0, opacity:1});
            animateWithGsap('.g_grow',{opacity:1 ,scale:1, ease:'power1' },{scrub:5.5});
            animateWithGsap('#g_text',{ y:0 ,opacity:1,ease:'power2.inOut',duration:1})        
@@ -59,7 +57,7 @@ const Features = () => {
                <div className='flex flex-col w-full relative'>
                     <div className='feature-video-container'>
                          <div className='overflow-hidden flex-1 h-[50vh]'>
-                              <img src={explore1Img} alt="titanium" className='feature-video g_grow' />
+                              <img src={explore1Img} alt="titanium" className='feature-video g_grow lg:w-screen' />
 
                          </div>
                          <div className='overflow-hidden flex-1 h-[50vh]'>
@@ -80,7 +78,7 @@ const Features = () => {
                        </div>
                        <div className='flex-1 flex-center'>
                            <p id='g_text' className='feature-text g_text'>
-                              Titanium has one of the best strength-to-weight ratio of any metal ,making these our {''}
+                              Titanium has one of the best strength-to-weight ratio of any metal, making these our {''}
                               <span className='text-white'>
                                   lightest Pro modules ever.
                               </span>

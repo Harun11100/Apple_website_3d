@@ -3,6 +3,8 @@ import Features from "./component/Features"
 import  Hero from "./component/Hero"
 import  Highlights from "./component/Highlights"
 import Model from "./component/Model"
+import HowItWorks from "./component/HowItWorks"
+import Footer from "./component/Footer"
 function App() {
   return (
    <main>
@@ -11,6 +13,8 @@ function App() {
     <Highlights/>
     <Model/>
     <Features/>
+    <HowItWorks/>
+    <Footer/>
    </main>
   )
 }

@@ -95,7 +95,7 @@ canvas {
   }
 
   .hiw-subtitle {
-    @apply text-gray font-semibold text-xl md:text-2xl py-10 text-center
+    @apply text-gray-50 font-semibold text-xl md:text-2xl py-10 text-center
   }
 
   .hiw-video {
@@ -107,7 +107,7 @@ canvas {
   }
 
   .hiw-text {
-    @apply text-gray text-xl font-normal md:font-semibold
+    @apply text-gray-50 text-xl font-normal md:font-semibold
   }
 
   .hiw-bigtext {

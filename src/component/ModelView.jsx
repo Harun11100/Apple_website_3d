@@ -29,7 +29,6 @@ const ModelView = ({index,item,size,groupRef,controlRef,gsapType,setRotationSize
     <Suspense
      fallback={<Loader/>}
     >
-  
     <Iphone 
      scale={index===1?[15,15,15]:[17,17,17]}
      item={item}
