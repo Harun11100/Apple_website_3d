@@ -31,7 +31,7 @@ const Features = () => {
      })
            animateWithGsap('#features_title',{ y:0, opacity:1});
            animateWithGsap('.g_grow',{opacity:1 ,scale:1, ease:'power1' },{scrub:5.5});
-           animateWithGsap('#g_text',{ y:0 ,opacity:1,ease:'power2.inOut',duration:1})        
+           animateWithGsap('.g_text',{ y:0 ,opacity:1,ease:'power2.inOut',duration:1})        
           },[]);
           
 
@@ -68,7 +68,7 @@ const Features = () => {
                     </div>
                     <div className='feature-text-container'>
                        <div className='flex-1 flex-center'>
-                           <p  id='g_text' className='feature-text g_text'>
+                           <p  className='feature-text g_text'>
                               iPhone 20 pro is {' '}
                               <span className='text-white'>
                                   the first iPhone to feature an aerospace-grade titanium design 
@@ -77,7 +77,7 @@ const Features = () => {
                            </p>
                        </div>
                        <div className='flex-1 flex-center'>
-                           <p id='g_text' className='feature-text g_text'>
+                           <p  className='feature-text g_text'>
                               Titanium has one of the best strength-to-weight ratio of any metal, making these our {''}
                               <span className='text-white'>
                                   lightest Pro modules ever.

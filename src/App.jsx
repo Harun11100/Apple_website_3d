@@ -10,9 +10,9 @@ function App() {
    <main>
     <Navbar/>
     <Hero/>
-    <Highlights/>
-    <Model/>
     <Features/>
+    <Model/>
+    <Highlights/>
     <HowItWorks/>
     <Footer/>
    </main>

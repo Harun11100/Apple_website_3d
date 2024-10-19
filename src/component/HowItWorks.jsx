@@ -24,7 +24,7 @@ const HowItWorks = () => {
              },
              opacity:1,
              ease:'power2.inOut',
-             duration:5,
+             duration:1,
              y:0
       })
 

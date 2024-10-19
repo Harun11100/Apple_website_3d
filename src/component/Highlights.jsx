@@ -44,8 +44,8 @@ useGSAP(()=>{
   // },[])
   
   return (
-    <section id="highlights" className="w-screen bg-zinc common-padding h-full ">
-    <div className="screen-max-width">
+    <section id="highlights" className="bg-zinc common-padding w-screen overflow-hidden h-full">
+     <div className="screen-max-width">
 
       <div className="mb-12 w-full md:flex items-end justify-between">
          <h1 id='title' className="section-heading">Get the highlights</h1>
