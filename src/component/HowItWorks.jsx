@@ -20,7 +20,7 @@ const HowItWorks = () => {
       gsap.to('.g_fadeIn',{
              scrollTrigger:{
                   trigger:'.g_fadeIn',
-                  start:"-20% bottom"
+                  start:"-10% bottom"
              },
              opacity:1,
              ease:'power2.inOut',

@@ -22,14 +22,14 @@ const Footer = () => {
 
        < div className='bg-neutral-700 my-5 h-[1px] w-full' />
     </div>
-    <div className='flex flex-col px-10'>
+    <div className='flex flex-center px-10'>
       <p className='font-semibold  text-gray-50 text-sm'>
             Copyright &copy; Apple Inc. All rights reverved.
       </p>
     </div>
-    <div className='flex justify-center items-center'>
+    <div className='lg:flex-center md:justify-center sm:items-center py-10'>
       {footerLinks.map(link=>(
-            <div key={link} className=' text-xs cursor-pointer px-3 text-blue'>
+            <div key={link} className=' text-xs cursor-pointer px-3 leading-5  text-blue'>
                   <ul className='hover:underline'>
                   {link}
                   </ul>
